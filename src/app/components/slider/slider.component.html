@@ -1,0 +1,79 @@
+
+
+    <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+                    <div class="sb-sidenav-menu-heading">Core</div>
+                    <a class="nav-link" [routerLink]="['/dashboard']">
+                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        Dashboard
+                    </a>
+                    <div class="sb-sidenav-menu-heading">Interface</div>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseEstudiantes" aria-expanded="false" aria-controls="collapseEstudiantes">
+                        <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                        Estudiantes
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="collapseEstudiantes" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" [routerLink]="['/list-estuden']">Listado Estudiantes</a>
+                            <a class="nav-link" href="layout-static.html">Carreras Tecnicas</a>
+                        </nav>
+                    </div>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePagos" aria-expanded="false" aria-controls="collapsePagos">
+                        <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                        Pagos
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="collapsePagos" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="layout-sidenav-light.html">Pagos Global</a>
+                            <a class="nav-link" href="layout-sidenav-light.html">Historial de pagos</a>
+                            <a class="nav-link" href="layout-static.html">Estados de pagos</a>
+                            <a class="nav-link" href="layout-static.html">Control de pagos</a>
+                        </nav>
+                    </div>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePeriodo" aria-expanded="false" aria-controls="collapsePeriodo">
+                        <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                        Periodo
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="collapsePeriodo" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="layout-sidenav-light.html">Periodo Lectivo</a>
+                            <a class="nav-link" href="layout-static.html">Horarios</a>
+                            <a class="nav-link" href="layout-static.html">Asistencias</a>
+                            <a class="nav-link" href="layout-static.html">Cronograma de pagos</a>
+                        </nav>
+                    </div>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseRegistros" aria-expanded="false" aria-controls="collapseRegistros">
+                        <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                        Usuarios
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="collapseRegistros" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="layout-sidenav-light.html">Resgistros Usuarios</a>
+                            <a class="nav-link" href="layout-sidenav-light.html">Control de Usuarios</a>
+                            
+                        </nav>
+                    </div>
+                    <!-- <div class="sb-sidenav-menu-heading">Addons</div>
+                    <a class="nav-link" href="charts.html">
+                        <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                        Charts
+                    </a>
+                    <a class="nav-link" href="tables.html">
+                        <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                        Tables
+                    </a> -->
+                </div>
+            </div>
+            <div class="sb-sidenav-footer">
+                <div class="small">Logged in as:</div>
+               
+            </div>
+        </nav>
+    </div>
+    

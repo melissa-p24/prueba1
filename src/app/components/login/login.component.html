@@ -1,0 +1,66 @@
+
+<div class="body">
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+  <div *ngIf="!loading" class="section">
+    <div class="container">
+      <div class="row full-height justify-content-center">
+        <div class="col-12 text-center align-self-center py-5">
+          <div class="section pb-5 pt-5 pt-sm-2 text-center">
+            <h6 class="mb-0 pb-3 mt-2"><span>Iniciar Session</span><span>Resgistrarse</span></h6>
+                  <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+                  <label for="reg-log"></label>
+            <div class="card-3d-wrap mx-auto">
+              <div class="card-3d-wrapper">
+                <div class="card-front">
+                  <div class="center-wrap">
+                    <div class="section text-center">
+                      <h4 class="mb-4 pb-3">Iniciar Session</h4>
+                      <div class="form-group">
+                        <input type="text" [(ngModel)]="nombre_usuario" class="form-style" placeholder="Ingresar Email" required>
+                        <i class="input-icon uil uil-at"></i>
+                      </div>	
+                      <div class="form-group mt-2">
+                        <input type="password" [(ngModel)]="contrasena" class="form-style" placeholder="Ingresar Password" required>
+                        <i class="input-icon uil uil-lock-alt"></i>
+                      </div>
+                      <button type="button" (click)="login()" class="btn mt-4">Iniciar Session</button>
+                      <p class="mb-0 mt-4 text-center"><a href="#" [routerLink]="['/dashboard']"  class="link">Contraseña Olvidada?</a></p>
+                        </div>
+                      </div>
+                    </div>
+                <div class="card-back">
+                  <div class="center-wrap">
+                    <div class="section text-center">
+                      <h4 class="mb-3 pb-3">Registrarse</h4>
+                      
+                      
+                      <div class="form-group mt-2">
+                        <input type="text" [(ngModel)]="nombre_usuario"  class="form-style" placeholder="Ingresar usuario" required>
+                        <i class="input-icon uil uil-at"></i>
+                      
+                      </div>
+                      <div class="form-group mt-2">
+                        <input type="password" [(ngModel)]="contrasena" class="form-style" placeholder="Ingresar Password" required>
+                        <i class="input-icon uil uil-lock-alt"></i>
+                      </div>
+                      <div class="form-group mt-2">
+                        <input type="password" [(ngModel)]="confiContrasena"  class="form-style" placeholder="Repetir Password" required>
+                        <i class="input-icon uil uil-lock-alt"></i>
+                      </div>
+                      <button type="button" (click)="addUser()" class="btn mt-4">Registrar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+  <app-spiner *ngIf="loading"></app-spiner>
+
+</div>
+  

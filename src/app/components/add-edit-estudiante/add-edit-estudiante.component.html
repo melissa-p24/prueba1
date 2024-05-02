@@ -1,0 +1,42 @@
+<app-progress-bar *ngIf="loading"></app-progress-bar>
+<div *ngIf="!loading" class="row mt-1">
+    <div class="col-lg-4 offset-lg-4">
+        <div class="card text-white bg-secondary mb-3" style="max-width: 25rem;">
+            <div class="card-header text-center">{{ operacion }} Estudiante </div>
+            <div class="card-body">
+                <form [formGroup]="form" (ngSubmit)="ruta()">
+                    <input formControlName="Nombres" type="text" class="form-control" placeholder="Ingrese nombre">
+                    <span *ngIf="form.get('Nombres')?.hasError('required') && form.get('Nombres')?.touched">
+                        El campo nombre es <strong>requerido</strong>
+                    </span>
+                    <input formControlName="Apellidos" type="text" class="form-control" placeholder="Ingrese apellido">
+                    <span *ngIf="form.get('Apellidos')?.hasError('required') && form.get('Apellidos')?.touched">
+                        El campo apellido es <strong>requerido</strong>
+                    </span>
+                    <input formControlName="num_cel" type="tex" class="form-control mt-2" placeholder="Ingrese Numero de Celular">
+                    <span *ngIf="form.get('num_cel')?.hasError('required') && form.get('num_cel')?.touched">
+                        El campo de celular es <strong>requerido</strong>
+                    </span>
+                    <input formControlName="email" type="text" class="form-control mt-2" placeholder="Ingrese email">
+                    <span *ngIf="form.get('email')?.hasError('required') && form.get('email')?.touched">
+                        El campo email es <strong>requerido</strong>
+                    </span>
+                    <input formControlName="DNI" type="text" class="form-control mt-2" placeholder="Ingrese dni">
+                    <span *ngIf="form.get('DNI')?.hasError('required') && form.get('DNI')?.touched">
+                        El campo dni es <strong>requerido</strong>
+                    </span>
+                    <div class="row mt-2 text-center">
+                        <div class="col-lg-6">
+                            <button  [routerLink]="['/tabla']"  type="button" class="btn btn-secondary">Cancelar</button>
+                           
+                        </div>
+                        <div class="col-lg-6">
+                            <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Grabar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
